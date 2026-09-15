@@ -1,0 +1,84 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-display: 'Space Grotesk', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  --color-primary: #6bd8cb;
+  --color-primary-container: #29a195;
+  --color-on-primary: #003732;
+  --color-on-primary-container: #00302b;
+  --color-primary-fixed: #89f5e7;
+  --color-primary-fixed-dim: #6bd8cb;
+
+  --color-surface: #0b1326;
+  --color-surface-dim: #0b1326;
+  --color-surface-bright: #31394d;
+  --color-surface-container-lowest: #060e20;
+  --color-surface-container-low: #131b2e;
+  --color-surface-container: #171f33;
+  --color-surface-container-high: #222a3d;
+  --color-surface-container-highest: #2d3449;
+
+  --color-on-surface: #dae2fd;
+  --color-on-surface-variant: #bcc9c6;
+  --color-outline: #879391;
+  --color-outline-variant: #3d4947;
+
+  --color-electric-blue: #00F0FF;
+  --color-emerald-green: #0E6B63;
+
+  --color-secondary: #f3c02f;
+  --color-secondary-container: #ce9f00;
+  --color-on-secondary: #3e2e00;
+
+  --color-tertiary: #ffb59a;
+  --color-tertiary-container: #d27956;
+  --color-on-tertiary: #591c02;
+
+  --color-error: #ffb4ab;
+  --color-error-container: #93000a;
+}
+
+@layer base {
+  body {
+    font-family: var(--font-sans);
+    background-color: var(--color-surface);
+    color: var(--color-on-surface);
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, .font-headline {
+    font-family: var(--font-display);
+  }
+}
+
+/* Custom utility glow classes */
+.neon-glow {
+  box-shadow: 0 0 20px rgba(107, 216, 203, 0.25), 0 0 40px rgba(0, 240, 255, 0.15);
+}
+
+.neon-border {
+  border-color: rgba(107, 216, 203, 0.35);
+  box-shadow: 0 0 15px rgba(107, 216, 203, 0.12);
+}
+
+.glow-btn {
+  box-shadow: 0 4px 20px rgba(107, 216, 203, 0.3);
+}
+
+.glow-btn:hover {
+  box-shadow: 0 6px 28px rgba(0, 240, 255, 0.45);
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.scrollbar-none {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
